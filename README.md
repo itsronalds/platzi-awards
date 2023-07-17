@@ -30,3 +30,9 @@ python3 -m venv (environment name)
 ```
 django-admin startproject (project-name)
 ```
+
+### Run Dev Server
+
+```
+py manage.py runserver
+```
