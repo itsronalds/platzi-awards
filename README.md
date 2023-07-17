@@ -39,4 +39,7 @@ py manage.py runserver
 
 ## Django concepts
 
-> A project in Django is a set of apps
+> - A project in Django is a set of apps
+
+> For Example:
+> Instagram is considered a project and its components are considered apps in Django: **Feed**, **DM's**, **Reels** and **more**
