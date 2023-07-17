@@ -36,3 +36,7 @@ django-admin startproject (project-name)
 ```
 py manage.py runserver
 ```
+
+## Django concepts
+
+> A project in Django is a set of apps
