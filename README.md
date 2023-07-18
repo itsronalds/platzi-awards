@@ -61,9 +61,10 @@ The ORM approach consists of converting the entities of a relational or SQL data
 # Users model
 class Users:
 
-  # Attributes
-  name = 'Ronald Abu Saleh'
-  role = 'Full Stack Developer'
+  # Attributes (SQL columns)
+  name = None
+  email = None
+  password = None
 
   # Constructor
   def __init__():
