@@ -55,3 +55,17 @@ py manage.py startapp <app name>
 The ORM approach consists of converting the entities of a relational or SQL database into objects, relating SQL databases to the OOP programming paradigm.
 
 > This approach is achieved through the creation of models, these models correspond to an entity of the SQL database, these models in the programming are classes
+> Whereas, the columns of a database in ORM modeling correspond to the attributes of the class or model
+
+```
+# Users model
+class Users:
+
+  # Attributes
+  name = 'Ronald Abu Saleh'
+  role = 'Full Stack Developer'
+
+  # Constructor
+  def __init__():
+    pass
+```
