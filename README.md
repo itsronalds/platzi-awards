@@ -45,7 +45,8 @@ py manage.py startapp <app name>
 
 ## Django concepts
 
-> - A **project** in Django is a set of **apps**
-
+> - A **project** in Django is a set of **apps**\
 > For Example:
 > Instagram is considered a project and its components are considered apps in Django: **Feed**, **DM's**, **Reels** and **more**
+
+> - Django is used by default with SQL databases, it can be used with NoSQL databases but it is not optimal
