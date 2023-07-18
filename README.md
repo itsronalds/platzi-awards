@@ -50,3 +50,6 @@ py manage.py startapp <app name>
 > Instagram is considered a project and its components are considered apps in Django: **Feed**, **DM's**, **Reels** and **more**
 
 > - Django is used by default with SQL databases, it can be used with NoSQL databases but it is not optimal
+
+### ORM (Object Relation Mapping) Explanation
+The ORM approach consists of converting the entities of a relational or SQL database into objects, relating SQL databases to the OOP programming paradigm.
