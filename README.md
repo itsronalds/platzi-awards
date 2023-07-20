@@ -70,3 +70,29 @@ class Users:
   def __init__():
     pass
 ```
+
+## Creating the database
+> * We can use [**dbdiagram.io**](https://dbdiagram.io/) to design relational databases
+
+### Structure
+dbdiagram code:
+
+```
+Table questions {
+  QuestionID int [pk, increment]
+  QuestionText text
+  Date date
+}
+
+Table choices {
+  ChoiceID int [pk, increment]
+  QuestionID int [ref: > questions.QuestionID]
+  ChoiceText text
+  Votes bigint
+}
+```
+
+### Design
+
+![database](https://github.com/itsronalds/platzi-awards/assets/77751686/43ccb80b-ce7e-4ce2-bcbb-f92a8ddc38be)
+
