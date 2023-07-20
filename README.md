@@ -103,6 +103,6 @@ cd platziawardsapp
 # Make migrations in polls app
 py manage.py makemigrations polls
 
-# Then, migrate the models to the database
+# Then, migrate the models to the database in SQL code
 py manage.py migrate
 ```
