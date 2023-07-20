@@ -108,11 +108,13 @@ py manage.py migrate
 ```
 
 ## Django shell
+
 ```
 py manage.py shell
 ```
 
 ## Database interaction
+
 ```
 # Create object from the model
 from polls.models import Question, Choice
@@ -127,3 +129,15 @@ q = Question(
 # Save it in the database
 q.save()
 ```
+
+### Queries using ORM
+
+```
+from polls.models import Question, Choice
+
+# Find one match using Question model - get method
+Question.objects.get(pk=1) # search object with the primary key equal to 1
+
+```
+
+> Reference: https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups-intro
