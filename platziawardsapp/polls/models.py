@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+
+from datetime import timedelta
 
 '''
     # Concepts:
@@ -10,6 +13,14 @@ from django.db import models
 class Question(models.Model):
     question_text = models.TextField
     date = models.DateTimeField('Date published')
+
+
+    def __str__(self):
+        return self.question_text
+    
+
+    def was_published_recently(self):
+        return self.date >= (timezone.now() - timedelta(days=1))
 
 
 class Choice(models.Model):
