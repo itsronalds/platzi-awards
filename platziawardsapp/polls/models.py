@@ -11,8 +11,8 @@ from datetime import timedelta
 
 
 class Question(models.Model):
-    question_text = models.TextField
-    date = models.DateTimeField('Date published')
+    question_text = models.CharField(max_length=255, default='')
+    date = models.DateTimeField('Date published', auto_now_add=True)
 
 
     def __str__(self):
@@ -25,5 +25,5 @@ class Question(models.Model):
 
 class Choice(models.Model):
     question_id = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.TextField
+    choice_text = models.CharField(max_length=255, default='')
     votes = models.BigIntegerField(default=0)
