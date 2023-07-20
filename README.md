@@ -45,11 +45,9 @@ py manage.py startapp <app name>
 
 ## Django concepts
 
-> - A **project** in Django is a set of **apps**\
-> For Example:
-> Instagram is considered a project and its components are considered apps in Django: **Feed**, **DM's**, **Reels** and **more**
-
+> - A **project** in Django is a set of **apps**. For Example: Instagram is considered a project and its components are considered apps in Django: **Feed**, **DM's**, **Reels** and **more**
 > - Django is used by default with SQL databases, it can be used with NoSQL databases but it is not optimal
+> - The models name must be written in singular
 
 ### ORM (Object Relation Mapping) Explanation
 The ORM approach consists of converting the entities of a relational or SQL database into objects, relating SQL databases to the OOP programming paradigm.
@@ -96,3 +94,15 @@ Table choices {
 
 ![database](https://github.com/itsronalds/platzi-awards/assets/77751686/43ccb80b-ce7e-4ce2-bcbb-f92a8ddc38be)
 
+### Using ORM
+Commands to create in database the tables from the models encoded in the models folder of a Django app
+
+```
+cd platziawardsapp
+
+# Make migrations in polls app
+py manage.py makemigrations polls
+
+# Then, migrate the models to the database
+py manage.py migrate
+```
