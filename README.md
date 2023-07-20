@@ -140,4 +140,23 @@ Question.objects.get(pk=1) # search object with the primary key equal to 1
 
 ```
 
-> Reference: https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups-intro
+Using filter method to filter by specific values
+
+```
+from polls.models import Question, Choice
+from django.utils import timezone
+
+# The __ help to filter by specific values, in this case filter by specific year
+Question.objects.filter(date__year=2023)
+Question.objects.filter(date__year=timezone.now().year)
+
+# Filter values by __startswith
+Question.objects.filter(question_text__startswith='¿Cuál')
+
+
+```
+
+Learn about how to make queries using Django ORM:
+
+* [Making queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
+* [Queries with lookups](https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups)
