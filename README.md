@@ -138,9 +138,6 @@ from polls.models import Question, Choice
 # Find one match using Question model - get method
 Question.objects.get(pk=1) # search object with the primary key equal to 1
 
-
-
-
 ```
 
-
+> Reference: https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups-intro
