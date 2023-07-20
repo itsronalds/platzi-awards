@@ -140,7 +140,7 @@ Question.objects.get(pk=1) # search object with the primary key equal to 1
 
 ```
 
-Using filter method to filter by specific values
+* Using filter method to filter by specific values
 
 ```
 from polls.models import Question, Choice
@@ -154,7 +154,7 @@ Question.objects.filter(date__year=timezone.now().year)
 Question.objects.filter(question_text__startswith='¿Cuál')
 ```
 
-Get related values ​​from two tables via foreign key
+* Get related values ​​from two tables via foreign key
 
 ```
 from polls.models import Question, Choice
@@ -165,6 +165,29 @@ q = Question.objects.get(pk=1)
 
 # Get all Choices of the Question 
 q.choice_set.all()
+```
+
+* Insert related data to another table
+
+```
+from polls.models import Question, Choice
+from django.utils import timezone
+
+# Insert Choice related to a some Question
+q = Question.objects.get(pk=1)
+
+q.choice_set.create(choice_text='Curso Básico de Django')
+q.choice_set.create(choice_text='Fundamentos de Ingeniería del Software')
+q.choice_set.create(choice_text='Curso de Elixir')
+
+# Show all choices of question
+q.choice_set.all()
+
+# Count all choices of question
+q.choice_set.count()
+
+# Get choices by it's Question date
+Choices.objects.filter(question__date__year=timezone.now().year)
 ```
 
 Learn about how to make queries using Django ORM:
