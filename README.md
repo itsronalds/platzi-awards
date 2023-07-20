@@ -152,8 +152,19 @@ Question.objects.filter(date__year=timezone.now().year)
 
 # Filter values by __startswith
 Question.objects.filter(question_text__startswith='¿Cuál')
+```
 
+Get related values ​​from two tables via foreign key
 
+```
+from polls.models import Question, Choice
+from django.utils import timezone
+
+# Obtain the Question with the pk=1 and assign it to a variable
+q = Question.objects.get(pk=1)
+
+# Get all Choices of the Question 
+q.choice_set.all()
 ```
 
 Learn about how to make queries using Django ORM:
