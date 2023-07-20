@@ -106,3 +106,24 @@ py manage.py makemigrations polls
 # Then, migrate the models to the database in SQL code
 py manage.py migrate
 ```
+
+## Django shell
+```
+py manage.py shell
+```
+
+## Database interaction
+```
+# Create object from the model
+from polls.models import Question, Choice
+from django.utils import timezone
+
+
+q = Question(
+  question_text='¿Cuál es el mejor curso de Platzi?',
+  date=timezone.now()
+)
+
+# Save it in the database
+q.save()
+```
