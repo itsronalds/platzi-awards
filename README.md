@@ -194,3 +194,15 @@ Learn about how to make queries using Django ORM:
 
 * [Making queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
 * [Queries with lookups](https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups)
+
+## MTV Pattern
+Django utiliza el patrón de MTV (Model, Template, View)
+
+* Model: it allows us to apply the concepts of object-oriented programming in a relational database
+* Template: refers to the static files of our project such as .html files
+* Views: the views are where we render our templates and have our business logic. This allows us to pass data to our templates and represent the data
+
+## Functions Based Views & Class Based Views (Generic Views)
+
+* Functions Based Views: it allows us to create business logic and render a template from a view function. This is used when our logic is unique and complex
+* Class Based Views: it allows us to abstract views with similar logic, allowing us to reduce the amount of code. We can also use the different pre-built views provided by Django. Reference [here](https://ccbv.co.uk/)
