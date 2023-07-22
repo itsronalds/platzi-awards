@@ -50,6 +50,7 @@ py manage.py startapp <app name>
 > - The models name must be written in singular
 
 ### ORM (Object Relation Mapping) Explanation
+
 The ORM approach consists of converting the entities of a relational or SQL database into objects, relating SQL databases to the OOP programming paradigm.
 
 > This approach is achieved through the creation of models, these models correspond to an entity of the SQL database, these models in the programming are classes
@@ -70,9 +71,11 @@ class Users:
 ```
 
 ## Creating the database
-> * We can use [**dbdiagram.io**](https://dbdiagram.io/) to design relational databases
+
+> - We can use [**dbdiagram.io**](https://dbdiagram.io/) to design relational databases
 
 ### Structure
+
 dbdiagram code:
 
 ```
@@ -95,6 +98,7 @@ Table choices {
 ![database](https://github.com/itsronalds/platzi-awards/assets/77751686/43ccb80b-ce7e-4ce2-bcbb-f92a8ddc38be)
 
 ### Using ORM
+
 Commands to create in database the tables from the models encoded in the models folder of a Django app
 
 ```
@@ -140,7 +144,7 @@ Question.objects.get(pk=1) # search object with the primary key equal to 1
 
 ```
 
-* Using filter method to filter by specific values
+- Using filter method to filter by specific values
 
 ```
 from polls.models import Question, Choice
@@ -154,7 +158,7 @@ Question.objects.filter(date__year=timezone.now().year)
 Question.objects.filter(question_text__startswith='¿Cuál')
 ```
 
-* Get related values ​​from two tables via foreign key
+- Get related values ​​from two tables via foreign key
 
 ```
 from polls.models import Question, Choice
@@ -163,11 +167,11 @@ from django.utils import timezone
 # Obtain the Question with the pk=1 and assign it to a variable
 q = Question.objects.get(pk=1)
 
-# Get all Choices of the Question 
+# Get all Choices of the Question
 q.choice_set.all()
 ```
 
-* Insert related data to another table
+- Insert related data to another table
 
 ```
 from polls.models import Question, Choice
@@ -192,17 +196,18 @@ Choices.objects.filter(question__date__year=timezone.now().year)
 
 Learn about how to make queries using Django ORM:
 
-* [Making queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
-* [Queries with lookups](https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups)
+- [Making queries](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
+- [Queries with lookups](https://docs.djangoproject.com/en/3.2/topics/db/queries/#field-lookups)
 
 ## MTV Pattern
+
 Django utiliza el patrón de MTV (Model, Template, View)
 
-* Model: it allows us to apply the concepts of object-oriented programming in a relational database
-* Template: refers to the static files of our project such as .html files
-* Views: the views are where we render our templates and have our business logic. This allows us to pass data to our templates and represent the data
+- Model: it allows us to apply the concepts of object-oriented programming in a relational database
+- Template: refers to the static files of our project such as .html files
+- Views: the views are where we render our templates and have our business logic. This allows us to pass data to our templates and represent the data
 
 ## Functions Based Views & Class Based Views (Generic Views)
 
-* Functions Based Views: it allows us to create business logic and render a template from a view function. This is used when our logic is unique and complex
-* Class Based Views: it allows us to abstract views with similar logic, allowing us to reduce the amount of code. We can also use the different pre-built views provided by Django. Reference [here](https://ccbv.co.uk/)
+- Functions Based Views: it allows us to create business logic and render a template from a view function. This is used when our logic is unique and complex
+- Class Based Views: it allows us to abstract views with similar logic, allowing us to reduce the amount of code. We can also use the different pre-built views provided by Django. Reference [here](https://ccbv.co.uk/)
